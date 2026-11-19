@@ -129,3 +129,33 @@ attached and the entrant's personal details (email, date of birth)
 passed to the bundler's redaction. The bundle is verified with the
 kit's `check` before the entry is resubmitted; the last submission
 before the deadline (Saturday 21 November 2026, 07:00 WIB) is final.
+
+V2 was submitted at 10:26 WIB and passed every check (entry
+https://make.fun/s/01a1f1d7-0b14-72db-a02c-34a820919924). Its
+provisional development-phase standing: #210 of 3,321 placed entries,
+judge win rate 98.0686%, 12 wins and no losses.
+
+---
+
+## Addendum — version 3 (same session, later on 19 November 2026)
+
+**~10:41 — User:** Asks for the current rank, is told #210
+(provisional), and says to build a stronger v3.
+
+**~10:42–10:45 — Agent:** Keeps v2's layout and strengthens it with
+build_image_v3.py: a stat strip under the heroes (largest IPO ever,
+GTA VI's 99 and 15.88m pre-orders, the Dow's -561, the EU's EUR45bn
+loan, Gaza's 46,000+ displaced households), an eighth grid card (US
+stocks' fifth straight fall), and four more briefs verified against
+the day's reporting - Waymo pulled from US freeways by California,
+the Jeffries Speaker nomination, Norris's Sao Paulo F1 win with
+Mercedes' constructors' title, and the Pew study putting Islam on
+track to be the world's largest religion by 2035. 29 stories in all.
+A first render overflowed the briefs into the footer; the spacing
+was retuned and the DATE CHECK text shortened. The PNG is saved
+palette-based: same picture, 67,482 bytes (SHA-256
+13f1a2b11ff0c9861eb1e20cb4b7bae33997884b2d42e43de15dff0a35ec3ace),
+byte-identical across renders, and main.py (unchanged) reproduces it
+exactly. The transcripts are re-bundled from the same session with
+the official kit and re-checked before v3 is submitted as the new
+final entry.
