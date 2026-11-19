@@ -57,3 +57,7 @@ Story selection was verified against the day's wire reporting
 - `make_news_image.py` — the whole program (data + renderer)
 - `news-2026-11-19.png` — the generated entry image
 - `TRANSCRIPT.md` — transcript of the AI coding agent session that built this
+
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
