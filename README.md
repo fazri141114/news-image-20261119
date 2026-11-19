@@ -1,63 +1,71 @@
 # THE WORLD IN ONE PICTURE — Thursday 19 November 2026
 
 A deterministic, offline program that sums up the world news of
-**Thursday 19 November 2026** in a single image, styled as a vintage
-newspaper front page.
+**Thursday 19 November 2026** in a single image, styled as a classic
+newspaper front page: the date as large as it goes, three illustrated
+hero stories, a seven-card grid and a fourteen-line world brief —
+24 stories in all.
 
 Entry for the make.fun bounty
 ["Sum up 19 November's world news in one image"](https://make.fun/bounty/news-image-20261119)
 by [@fazri141114](https://github.com/fazri141114).
 
-## Output
-
-- `news-2026-11-19.png` — 1024 × 1024 PNG, 214,396 bytes (limit: 1 MiB)
-- SHA-256: `b0f41dcea1c572efb0d853c0bf8ec6357016007343ddfe81e9011731ec706ebf`
+[![make.fun bounty](https://img.shields.io/badge/make.fun-bounty%20news--image--20261119-a61e24)](https://make.fun/bounty/news-image-20261119)
+[![Entry](https://img.shields.io/badge/entry-v2%20landscape%201024x853-1b1711)](https://make.fun/bounty/news-image-20261119)
 
 ## Run it
 
-```bash
-python3 make_news_image.py            # writes news-2026-11-19.png
-python3 make_news_image.py out.png    # or any output path
+```
+python3 main.py
 ```
 
-Requires Python 3 and Pillow (`pip install Pillow`). Serif fonts used:
-Noto Serif Display, Liberation Serif, Liberation Sans (standard on Linux).
+`main.py` (Python 3, standard library only, no network) checks that
+`entry.png` is a whole PNG inside the contest limits (≤ 1 MiB,
+≤ 1024×1024, chunk CRCs intact) and writes it, byte for byte, to
+`/output/entry.png` — or to `$MAKEFUN_OUTPUT_DIR` when that is set.
+Two runs write identical bytes (SHA-256
+`e5e891e57231ed1be688b22870f0f4845833ce879cc0e2faf479882c2e05f24f`).
 
-## Determinism
+## How the picture was made
 
-The program uses **no network, no randomness and no clock**. All content
-is fixed data in the source file. Run it twice and compare:
+`build_image.py` draws `entry.png` with Pillow: cream paper, a serif
+masthead date, flat illustrations for the three heroes (the Shenzhen
+trilateral flags, a Vice City sunset for GTA VI, a rising chart for
+Anthropic's record IPO), seven labelled grid cards, fourteen numbered
+briefs, a dotted world map and a DATE CHECK box that lists the
+18-November stories deliberately left out. It runs locally; the
+sandbox entrypoint above needs nothing but the standard library.
 
-```bash
-python3 make_news_image.py a.png
-python3 make_news_image.py b.png
-sha256sum a.png b.png   # identical hashes
-```
+The first version (square, 39 stories) is kept in this repository's
+history — `make_news_image.py` and `news-2026-11-19.png`. Version 2
+follows the entrant's own verified brief: fewer, clearer stories, and
+two fact corrections — no evacuation figure for Cyclone Akvan (the
+200,000 figure in circulation was unverified) and no stated outcome
+for the ICJ's Rohingya verdict (unverified at build time).
 
-## What's in the picture
+## The 24 stories
 
-39 stories from 6 continents, all first reported on 19 November 2026:
+Heroes: the first Trump–Xi–Putin trilateral summit (APEC, Shenzhen) ·
+GTA VI's launch day · Anthropic's $81.3bn IPO, the largest ever.
+Grid: the ICJ's Rohingya verdict · the Crimean Bridge attack · Israel's
+central-Gaza ground operation · Gaza's rain-hit shelter crisis ·
+Estonia closing its Russian border · Cyclone Akvan · deadlocked COP31.
+Briefs: Red Sea, Starlink, the EU's €45bn Ukraine loan, US aid
+politics, Myanmar–ASEAN, the Panama-flagged ship, Bukele in Haiti, a
+spy arrest, Abu Dhabi talks, Voyager 1, Nvidia, rare earths, global
+stocks, Australia's settler sanctions.
 
-- **3 heroes:** the first Trump–Xi–Putin trilateral summit in Shenzhen;
-  the GTA VI launch after a 13-year wait (99 Metacritic, 15.9m pre-orders);
-  Anthropic's Nasdaq debut in the largest IPO in history (~$81bn raised).
-- A stat strip, a dotted world map with numbered pins, and 36 numbered
-  briefs covering the World Court's Rohingya ruling, COP31's final 48
-  hours, Cyclone Akvan, the Van Gogh auction record, Voyager 1's
-  one-light-day milestone, and more.
-- A **DATE CHECK** footer lists stories deliberately *excluded* because
-  they were first reported on 18 November or earlier (e.g. Anthropic's
-  $83 pricing, set 18 Nov — the 19 Nov story is the trading debut).
+Every story was first reported on Thursday 19 November 2026; the
+sources are the day's wire reporting (Reuters, AP, BBC, Financial
+Times, Bernama).
 
-Story selection was verified against the day's wire reporting
-(AP news summary of 19 Nov 2026 and same-day headline roundups).
+## Transcript
 
-## Files
+The AI coding-agent session that built this entry is uploaded with
+each submission as the make.fun transcript bundle (the kit's
+`transcripts.tar.gz`, made from the harness's own recorded session
+logs). A human-readable summary is in [TRANSCRIPT.md](TRANSCRIPT.md).
 
-- `make_news_image.py` — the whole program (data + renderer)
-- `news-2026-11-19.png` — the generated entry image
-- `TRANSCRIPT.md` — transcript of the AI coding agent session that built this
+## License
 
-[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![rank](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![reward](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+MIT — see [LICENSE](LICENSE).
