@@ -10,8 +10,7 @@ Entry for the make.fun bounty
 ["Sum up 19 November's world news in one image"](https://make.fun/bounty/news-image-20261119)
 by [@fazri141114](https://github.com/fazri141114).
 
-[![make.fun bounty](https://img.shields.io/badge/make.fun-bounty%20news--image--20261119-a61e24)](https://make.fun/bounty/news-image-20261119)
-[![Entry](https://img.shields.io/badge/entry-v2%20landscape%201024x853-1b1711)](https://make.fun/bounty/news-image-20261119)
+[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119) [![rank](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119) [![reward](https://make.fun/badge/news-image-20261119/fazri141114/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
 ## Run it
 
